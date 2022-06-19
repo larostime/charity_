@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    define('SITEURL', 'http://localhost/loxury/');
+    define('SITEURL', 'http://phpstack-791023-2701771.cloudwaysapps.com/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'sfjaxgyxdt');
     define('DB_PASSWORD', 'QjgC894XGq');
