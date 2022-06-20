@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include('admin/constants.php'); ?>
     <head>
         <meta charset="utf-8">
         <title>AidUA</title>
@@ -66,10 +67,21 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.php" class="nav-item nav-link active">Головна</a>
+
+<?php $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+if (strpos($url,'index.php') !== false) {
+    ?>
+        <a href="index.php" class="nav-item nav-link active">Головна</a>
+    <?php
+}
+else {
+    ?>
+        <a href="index.php" class="nav-item nav-link">Головна</a>
+    <?php
+} ?>
                         <a href="about.php" class="nav-item nav-link">Про нас</a>
                         <a href="causes.php" class="nav-item nav-link">Допомогти</a>
-                        <a href="event.php" class="nav-item nav-link">Долучитись до команди</a>
                         <a href="blog.php" class="nav-item nav-link">Новини</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Статті</a>
