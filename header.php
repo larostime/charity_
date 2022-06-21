@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <title>AidUA</title>
+        <link rel="icon" href="img/favicon1.png"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -47,7 +48,6 @@
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
                                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
                                 <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.php" class="navbar-brand">SaveUkraine</a>
+                <a href="index.php" class="navbar-brand">AidUA</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -72,28 +72,80 @@
 
 if (strpos($url,'index.php') !== false) {
     ?>
-        <a href="index.php" class="nav-item nav-link active">Головна</a>
+                        <a href="index.php" class="nav-item nav-link active">Головна</a>
     <?php
 }
 else {
     ?>
-        <a href="index.php" class="nav-item nav-link">Головна</a>
+                        <a href="index.php" class="nav-item nav-link">Головна</a>
     <?php
 } ?>
-                        <a href="about.php" class="nav-item nav-link">Про нас</a>
+
+<?php
+if (strpos($url,'causes.php') !== false) {
+    ?>
+                        <a href="causes.php" class="nav-item nav-link active">Допомогти</a>
+    <?php
+}
+else {
+    ?>
                         <a href="causes.php" class="nav-item nav-link">Допомогти</a>
-                        <a href="blog.php" class="nav-item nav-link">Новини</a>
+    <?php
+} ?>
+
+<?php
+if (strpos($url,'ask_for_aid.php') !== false) {
+    ?>
+                        <a href="ask_for_aid.php" class="nav-item nav-link active">Попросити про допомогу</a>
+    <?php
+}
+else {
+    ?>
+                        <a href="ask_for_aid.php" class="nav-item nav-link">Попросити про допомогу</a>
+    <?php
+} ?>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Статті</a>
+
+
+<?php
+
+
+
+
+if (strpos($url,'about.php' !== false)){
+    ?> <a href="#" class="nav-item nav-link active">Інші сторінки</a> <?php
+}
+else {
+    if (strpos($url,'blog.php' !== false)){
+        ?> <a href="#" class="nav-item nav-link active" data-toggle="dropdown">Інші сторінки</a> <?php
+    }
+    else {
+        if (strpos($url,'contact.php' !== false)){
+            ?> <a href="#" class="nav-item nav-link active" data-toggle="dropdown">Інші сторінки</a> <?php
+        }
+        else {
+            if (strpos($url,'single.php' !== false)){
+                ?> <a href="#" class="nav-item nav-link active" data-toggle="dropdown">Інші сторінки</a> <?php
+            }
+            else {
+                ?> <a href="#" class="nav-item nav-link" data-toggle="dropdown">Інші сторінки</a> <?php
+            }
+        }
+    }
+}
+?>
+
+
+
+
                             <div class="dropdown-menu">
-                                <a href="single.php" class="dropdown-item">Detail Page</a>
-                                <a href="service.php" class="dropdown-item">What We Do</a>
-                                <a href="team.php" class="dropdown-item">Meet The Team</a>
-                                <a href="donate.php" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.php" class="dropdown-item">Become A Volunteer</a>
+                                <a href="about.php" class="dropdown-item">Про нас</a>
+                                <a href="blog.php" class="dropdown-item">Новини</a>
+                                <a href="contact.php" class="dropdown-item">Контакти</a>
+                                <a href="single.php" class="dropdown-item">Дізнатись більше про благодійність</a>
                             </div>
+
                         </div>
-                        <a href="contact.php" class="nav-item nav-link">Контакти</a>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 <?php
     session_start();
 
-    define('SITEURL', 'http://phpstack-791338-2703049.cloudwaysapps.com/');
+    define('SITEURL', 'http://localhost/charity/');
     define('LOCALHOST', 'localhost');
-    define('DB_USERNAME', 'ugvpfzpvwk');
-    define('DB_PASSWORD', '8EXrsVCQ7R');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', '');
     define('DB_NAME', "ugvpfzpvwk");
 
     $conn = mysqli_connect (LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error());

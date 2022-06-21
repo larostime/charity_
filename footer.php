@@ -5,43 +5,62 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact">
                             <h2>Офіс</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>Героїв Маріуполя 12, Львів, Україна</p>
+                            <p><i class="fa fa-map-marker-alt"></i>Чорнобаївська 666, Львів</p>
                             <p><i class="fa fa-phone-alt"></i>+1212121221121212</p>
                             <p><i class="fa fa-envelope"></i>нашаскринька@гмейл.com</p>
                             <div class="footer-social">
                                 <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
                                 <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Корисні посилання</h2>
-                            <a href="">Про нас</a>
-                            <a href="">Контакти</a>
+                            <a href="about.php">Про нас</a>
+                            <a href="contact.php">Контакти</a>
                             <a href="">Термінові запити</a>
                             <a href="">Популярні статті</a>
-                            <a href="">Останні новини</a>
+                            <a href="blog.php">Останні новини</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Ще трохи Корисних посиланнь</h2>
-                            <a href="">Умови використання</a>
-                            <a href="">Політика приватності</a>
                             <a href="">Кукіси</a>
-                            <a href="">Часті питання</a>
+                            <a href="">Відповіді на питання</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-newsletter">
-                            <h2>Новини. Важливі запити</h2>
-                            <form>
-                                <input class="form-control" placeholder="Ваша електронна скринька">
-                                <button class="btn btn-custom">Надіслати</button>
+                            <h2>Новини, важливі запити</h2>
+                            <form action=""  method="POST">
+                                <input type="text" name = "usermail" class="form-control" placeholder="Ваша електронна скринька">
+                                <button type="submit" name = "submit" class="btn btn-custom">Надіслати</button>
+
+                                <?php
+                                    if(isset($_POST['submit']))
+                                    {
+                                    $useremail = $_POST['usermail'];
+
+                                    $sql = "INSERT INTO tbl_user SET user_email = '$useremail'";
+
+                                    $res = mysqli_query($conn, $sql);
+
+                                    if ($res==TRUE)
+                                    { ?>
+                                        <h2>Успіх!</h2>
+                                        <?php
+                                    }
+                                    else
+                                    {?>
+                                        <h2>Невдача :-(</h2>
+                                        <?php
+                                    }
+                                    }
+                                ?>
+
                             </form>
                         </div>
                     </div>
@@ -50,7 +69,7 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">SaveUkrainians</a>, Всі права захищені.</p>
+                        <p>&copy; <a href="#">AidUA</a>, Всі права захищені.</p>
                     </div>
                 </div>
             </div>
