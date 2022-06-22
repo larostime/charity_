@@ -13,9 +13,9 @@
         $id = $_GET['id'];
         $status = 'Unchecked';
 
-        if ($id=$status){
+        if ($id==$status){
             $sql4 = "UPDATE tbl_ware SET
-            status = 'Aproved'
+            status = 'Unchecked'
             WHERE id='$id'
             ";
             
@@ -39,7 +39,7 @@
 
         else{
             $sql4 = "UPDATE tbl_ware SET
-            status = 'Unchecked'
+            status = 'Aproved'
             WHERE id='$id'
             ";
             

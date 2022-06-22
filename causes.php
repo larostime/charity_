@@ -25,7 +25,7 @@
                 <div class="owl-carousel causes-carousel">
             <?php
                 //Display that are Active
-                $sql = "SELECT * FROM tbl_ware";
+                $sql = "SELECT * FROM tbl_ware WHERE status = 'Aproved'";
 
                 //Execute the Query
                 $res=mysqli_query($conn, $sql);

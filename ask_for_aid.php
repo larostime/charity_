@@ -21,6 +21,7 @@
         ?>
         
         <!-- Contact Start -->
+        <tr><tr>
         <div class="contact">
             <div class="container">
                 <div class="section-header text-center">
@@ -63,7 +64,7 @@
                             </div>
                             <br>
                             <div>
-                                <button type="submit" name="submit" class="btn btn-custom">Надіслати повідомлення</button>
+                                <button type="submit" name="submit" class="btn btn-custom">Надіслати запит</button>
                             </div>
                             <br>
                         </form>
