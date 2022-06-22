@@ -3,7 +3,7 @@
 <?php include('admin/constants.php'); ?>
     <head>
         <meta charset="utf-8">
-        <title>AidUA</title>
+        <title>AidUAippt</title>
         <link rel="icon" href="img/favicon1.png"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
