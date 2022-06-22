@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    define('SITEURL', 'http://phpstack-791338-2703049.cloudwaysapps.com/');
+    define('SITEURL', 'https://phpstack-791338-2703049.cloudwaysapps.com/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'ugvpfzpvwk');
     define('DB_PASSWORD', '8EXrsVCQ7R');
