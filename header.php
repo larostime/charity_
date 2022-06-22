@@ -3,7 +3,7 @@
 <?php include('admin/constants.php'); ?>
     <head>
         <meta charset="utf-8">
-        <title>AidUAippt</title>
+        <title>AidUA</title>
         <link rel="icon" href="img/favicon1.png"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
@@ -60,7 +60,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.php" class="navbar-brand">AidUA</a>
+                <a href="index.php" class="navbar-brand">AidUAippt</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
