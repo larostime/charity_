@@ -2,7 +2,7 @@
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Manage Order</h1>
+        <h1>Управління донатами</h1>
 
         <br><br>
         <?php 
@@ -16,12 +16,11 @@
 
             <table class="tbl-full">
                     <tr>
-                        <th>Number</th>
-                        <th>Ware</th>
-                        <th>Qty.</th>
-                        <th>Price</th>
-                        <th>Order Date</th>
-                        <th>Customer id</th>
+                        <th>Номер</th>
+                        <th>Номер запиту</th>
+                        <th>Пожертвовано</th>
+                        <th>Ім'я</th>
+                        <th>E-mail</th>
                     </tr>
 
                     <?php 
@@ -40,20 +39,19 @@
                                 //Get all the order details
                                 $id = $row['id'];
                                 $ware = $row['ware'];
-                                $qty = $row['qty'];
                                 $total_price = $row['total_price'];
-                                $order_date = $row['order_date'];
-                                $customer_id = $row['customer_id'];
+                                $name = $row['name'];
+                                $email = $row['email'];
+
                                 
                                 ?>
 
                                     <tr>
                                         <td><?php echo $id; ?>. </td>
                                         <td><?php echo $ware; ?></td>
-                                        <td><?php echo $qty; ?></td>
                                         <td><?php echo $total_price; ?></td>
-                                        <td><?php echo $order_date; ?></td>
-                                        <td><?php echo $customer_id; ?></td>
+                                        <td><?php echo $name; ?></td>
+                                        <td><?php echo $email; ?></td>
                                     </tr>
 
                                 <?php

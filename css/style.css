@@ -529,7 +529,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/index.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -1979,7 +1979,6 @@ a:focus {
 
 .sidebar .category-widget ul li span {
     display: inline-block;
-    float: right;
 }
 
 .sidebar .sidebar-widget .tag-widget {

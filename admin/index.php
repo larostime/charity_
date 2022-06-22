@@ -4,7 +4,8 @@
 <!-- Main Content Section Starts -->
 <div class="main-content">
     <div class="wrapper">
-        <h1>Dashboard</h1>
+        <h1>Панель
+        </h1>
         <br><br>
         <?php 
             if(isset($_SESSION['login']))
@@ -19,7 +20,7 @@
 
             <?php 
                 //Sql Query 
-                $sql = "SELECT * FROM tbl_category";
+                $sql = "SELECT * FROM tbl_user";
                 //Execute Query
                 $res = mysqli_query($conn, $sql);
                 //Count Rows
@@ -28,7 +29,7 @@
 
             <h1><?php echo $count; ?></h1>
             <br />
-            Categories
+            Користувачів зареєструвалось
         </div>
 
         <div class="col-4 text-center">
@@ -44,7 +45,7 @@
 
             <h1><?php echo $count2; ?></h1>
             <br />
-            Wares
+            Запитів всього
         </div>
 
         <div class="col-4 text-center">
@@ -60,7 +61,7 @@
 
             <h1><?php echo $count3; ?></h1>
             <br />
-            Total Orders
+            Всього донатів
         </div>
 
         <div class="col-4 text-center">
@@ -83,7 +84,7 @@
 
             <h1>$<?php echo $total_revenue; ?></h1>
             <br />
-            Revenue Generated
+            Всього пожертвовано
         </div>
 
         <div class="clearfix"></div>

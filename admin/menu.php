@@ -4,7 +4,7 @@
 
 <html>
     <head>
-        <title> Loxury </title>
+        <title> AidUAadmin </title>
 
         <link rel="stylesheet" href = "../css/admin.css">
     </head>
@@ -14,12 +14,12 @@
         <div class = "menu text-center">
             <div class = "wrapper">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="manage-admin.php">Admin</a></li>
-                    <li><a href="manage-category.php">Category</a></li>
-                    <li><a href="manage-ware.php">Ware</a></li>
-                    <li><a href="manage-order.php">Order</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="index.php">Головна</a></li>
+                    <li><a href="manage-admin.php">Список адмінів</a></li>
+                    <li><a href="manage-users.php">Список користувачів</a></li>
+                    <li><a href="manage-requests.php">Запити</a></li>
+                    <li><a href="manage-donates.php">Донати</a></li>
+                    <li><a href="logout.php">Вихід</a></li>
                 </ul>
             </div>
         </div>

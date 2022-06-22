@@ -37,10 +37,10 @@
                             <h2>Новини, важливі запити</h2>
                             <form action=""  method="POST">
                                 <input type="text" name = "usermail" class="form-control" placeholder="Ваша електронна скринька">
-                                <button type="submit" name = "submit" class="btn btn-custom">Надіслати</button>
+                                <button type="submit1" name = "submit1" class="btn btn-custom">Надіслати</button>
 
                                 <?php
-                                    if(isset($_POST['submit']))
+                                    if(isset($_POST['submit1']))
                                     {
                                     $useremail = $_POST['usermail'];
 

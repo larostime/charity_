@@ -2,12 +2,12 @@
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Manage Wares</h1>
+        <h1>Керувати запитами</h1>
 
         <br /><br />
 
                 <!-- Button to Add Admin -->
-                <a href="<?php echo SITEURL; ?>admin/add-ware.php" class="btn-primary">Add Ware</a>
+                <a href="<?php echo SITEURL; ?>admin/add-ware.php" class="btn-primary">Створити запит</a>
 
                 <br /><br /><br />
 
@@ -46,11 +46,13 @@
 
                 <table class="tbl-full">
                     <tr>
-                        <th>S.N.</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                        <th>Actions</th>
+                        <th>Номер запиту</th>
+                        <th>Назва</th>
+                        <th>Опис</th>
+                        <th>Ціль</th>
+                        <th>Зібрано</th>
+                        <th>Зображення</th>
+                        <th>Статус</th>
                     </tr>
 
                     <?php 
@@ -75,14 +77,19 @@
                                 //get the values from individual columns
                                 $id = $row['id'];
                                 $title = $row['title'];
+                                $description = $row['description'];
                                 $price = $row['price'];
+                                $reached = $row['reached'];
                                 $image_name = $row['image_name'];
+                                $status = $row['status'];
                                 ?>
 
                                 <tr>
-                                    <td><?php echo $sn++; ?>. </td>
-                                    <td><?php echo $title; ?></td>
-                                    <td>$<?php echo $price; ?></td>
+                                    <td width="50"><?php echo $sn++; ?>. </td>
+                                    <td width="100"><?php echo $title; ?></td>
+                                    <td width="450"><?php echo $description; ?></td>
+                                    <td>грн.<?php echo $price; ?></td>
+                                    <td><?php echo $reached; ?></td>
                                     <td>
                                         <?php  
                                             //CHeck whether we have image or not
@@ -95,14 +102,16 @@
                                             {
                                                 //WE Have Image, Display Image
                                                 ?>
-                                                <img src="<?php echo SITEURL; ?>images/<?php echo $image_name; ?>" width="100px">
+                                                <img src="<?php echo SITEURL; ?>img/<?php echo $image_name; ?>" width="100px">
                                                 <?php
                                             }
                                         ?>
                                     </td>
+                                    <td><?php echo $status; ?></td>
                                     <td>
-                                        <a href="<?php echo SITEURL; ?>admin/update-ware.php?id=<?php echo $id; ?>" class = "btn-primary">Update Ware</a>
-                                        <a href="<?php echo SITEURL; ?>admin/delete-ware.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class = "btn-red">Delete Ware</a>
+                                        <a href="<?php echo SITEURL; ?>admin/change_status.php?id=<?php echo $id; ?>" class = "btn-primary">Підтвердити</a>
+                                        <a href="<?php echo SITEURL; ?>admin/update-ware.php?id=<?php echo $id; ?>" class = "btn-primary">Редагувати</a>
+                                        <a href="<?php echo SITEURL; ?>admin/delete-ware.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class = "btn-red">Видалити</a>
                                     </td>
                                 </tr>
 

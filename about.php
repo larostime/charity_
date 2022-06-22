@@ -65,13 +65,21 @@
         <!-- Facts Start -->
         <div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg">
             <div class="container">
-                <div class="row">
+            <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="facts-item">
                             <i class="flaticon-home"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">150</h3>
-                                <p>Countries</p>
+                            <?php 
+                //Sql Query 
+                $sql = "SELECT * FROM tbl_user";
+                //Execute Query
+                $res = mysqli_query($conn, $sql);
+                //Count Rows
+                $count = mysqli_num_rows($res);
+            ?>
+                                <h3 class="facts-plus" data-toggle="counter-up"><?php echo $count; ?></h3>
+                                <p>Донорів</p>
                             </div>
                         </div>
                     </div>
@@ -79,8 +87,16 @@
                         <div class="facts-item">
                             <i class="flaticon-charity"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">400</h3>
-                                <p>Volunteers</p>
+            <?php 
+                //Sql Query 
+                $sql2 = "SELECT * FROM tbl_ware";
+                //Execute Query
+                $res2 = mysqli_query($conn, $sql2);
+                //Count Rows
+                $count2 = mysqli_num_rows($res2);
+            ?>
+                                <h3 class="facts-plus" data-toggle="counter-up"><?php echo $count2; ?></h3>
+                                <p>Запитів</p>
                             </div>
                         </div>
                     </div>
@@ -88,8 +104,23 @@
                         <div class="facts-item">
                             <i class="flaticon-kindness"></i>
                             <div class="facts-text">
-                                <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
-                                <p>Our Goal</p>
+                            <?php 
+                //Creat SQL Query to Get Total Revenue Generated
+                //Aggregate Function in SQL
+                $sql4 = "SELECT SUM(price) AS Total FROM tbl_ware";
+
+                //Execute the Query
+                $res4 = mysqli_query($conn, $sql4);
+
+                //Get the VAlue
+                $row4 = mysqli_fetch_assoc($res4);
+                
+                //GEt the Total REvenue
+                $total_revenue1 = $row4['Total'];
+
+            ?>
+                                <h3 class="facts-plus" data-toggle="counter-up"><?php echo $total_revenue1; ?></h3>
+                                <p>Гривень зараз потрібно</p>
                             </div>
                         </div>
                     </div>
@@ -97,8 +128,20 @@
                         <div class="facts-item">
                             <i class="flaticon-donation"></i>
                             <div class="facts-text">
-                                <h3 class="facts-dollar" data-toggle="counter-up">5000</h3>
-                                <p>Raised</p>
+            <?php 
+                $sql5 = "SELECT SUM(total_price) AS Total FROM tbl_order";
+
+                //Execute the Query
+                $res5 = mysqli_query($conn, $sql5);
+
+                //Get the VAlue
+                $row5 = mysqli_fetch_assoc($res5);
+                
+                //GEt the Total REvenue
+                $total_revenue2 = $row5['Total'];
+            ?>
+                                <h3 class="facts-plus" data-toggle="counter-up"> <?php echo $total_revenue2; ?></h3>
+                                <p>Гривень вже зібрано</p>
                             </div>
                         </div>
                     </div>
@@ -106,160 +149,5 @@
             </div>
         </div>
         <!-- Facts End -->
-
-
-        <!-- Team Start -->
-        <div class="team">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Meet Our Team</p>
-                    <h2>Awesome guys behind our charity activities</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-1.jpg" alt="Team Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Donald John</h2>
-                                <p>Founder & CEO</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-2.jpg" alt="Team Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Adam Phillips</h2>
-                                <p>Chef Executive</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-3.jpg" alt="Team Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>Thomas Olsen</h2>
-                                <p>Chef Advisor</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-item">
-                            <div class="team-img">
-                                <img src="img/team-4.jpg" alt="Team Image">
-                            </div>
-                            <div class="team-text">
-                                <h2>James Alien</h2>
-                                <p>Advisor</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-        
-        
-        <!-- Testimonial Start -->
-        <div class="testimonial">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Testimonial</p>
-                    <h2>What people are talking about our charity activities</h2>
-                </div>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-1.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-2.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-3.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-profile">
-                            <img src="img/testimonial-4.jpg" alt="Image">
-                            <div class="testimonial-name">
-                                <h3>Person Name</h3>
-                                <p>Profession</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Phasel preti mi facilis ornare velit non vulputa. Aliqu metus tortor, auctor id gravid vivera quis
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-
-
-
 
         <?php include ('footer.php'); ?>

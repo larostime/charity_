@@ -2,7 +2,7 @@
 
 <div class="main-content">
     <div class="wrapper">
-        <h1>Manage Category</h1>
+        <h1>Керувати користувачами</h1>
 
         <br /><br />
         <?php 
@@ -53,22 +53,23 @@
         <br><br>
 
                 <!-- Button to Add Admin -->
-                <a href="<?php echo SITEURL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
+                <a href="<?php echo SITEURL; ?>admin/add-user.php" class="btn-primary">Додати користувача</a>
 
                 <br /><br /><br />
 
                 <table class="tbl-full">
                     <tr>
-                        <th>S.N.</th>
-                        <th>Title</th>
-                        <th>Image</th>
-                        <th>Actions</th>
+                        <th>Номер користувача</th>
+                        <th>Ім'я</th>
+                        <th>Прізвище</th>
+                        <th>Номер телефону</th>
+                        <th>Еmail</th>
                     </tr>
 
                     <?php 
 
                         //Query to Get all CAtegories from Database
-                        $sql = "SELECT * FROM tbl_category";
+                        $sql = "SELECT * FROM tbl_user";
 
                         //Execute Query
                         $res = mysqli_query($conn, $sql);
@@ -87,40 +88,24 @@
                             while($row=mysqli_fetch_assoc($res))
                             {
                                 $id = $row['id'];
-                                $title = $row['title'];
-                                $image_name = $row['image_name'];
+                                $name = $row['name'];
+                                $second_name = $row['second_name'];
+                                $phone_number = $row['phone_number'];
+                                $user_email = $row['user_email'];
 
                                 ?>
 
                                     <tr>
                                         <td><?php echo $sn++; ?>. </td>
-                                        <td><?php echo $title; ?></td>
+                                        <td><?php echo $name; ?></td>
+                                        <td><?php echo $second_name; ?></td>
+                                        <td><?php echo $phone_number; ?></td>
+                                        <td><?php echo $user_email; ?></td>
+
 
                                         <td>
-
-                                            <?php  
-                                                //Chcek whether image name is available or not
-                                                if($image_name!="")
-                                                {
-                                                    //Display the Image
-                                                    ?>
-                                                    
-                                                    <img src="<?php echo SITEURL; ?>images/<?php echo $image_name; ?>" width="100px" >
-                                                    
-                                                    <?php
-                                                }
-                                                else
-                                                {
-                                                    //DIsplay the MEssage
-                                                    echo "<div>Image not Added.</div>";
-                                                }
-                                            ?>
-
-                                        </td>
-
-                                        <td>
-                                            <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class = "btn-primary">Update Category</a>
-                                            <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class = "btn-red">Delete Category</a>
+                                            <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id; ?>" class = "btn-primary">Редагувати</a>
+                                            <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class = "btn-red">Видалити</a>
                                         </td>
                                     </tr>
 

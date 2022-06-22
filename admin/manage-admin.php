@@ -3,7 +3,7 @@
         <!-- Main Content 1 -->
         <div class = "main-content">
             <div class = "wrapper">
-                <h1>Manage admins panel</h1>
+                <h1>Керувати списком адміністраторів</h1>
 
                 <?php
                     if (isset($_SESSION['add']))
@@ -27,13 +27,13 @@
                 <br></br>
 
                 <!-- Button to add admin -->
-                <a href="add-admin.php" class = "btn-primary">Add admin</a>
+                <a href="add-admin.php" class = "btn-primary">Додати адміністратора</a>
                 <br></br>
 
                 <table class = "tbl-full">
                     <tr>
-                        <th>User Name</th>
-                        <th>Password</th>
+                        <th>Користувацьке ім'я адміна</th>
+                        <th>Пароль</th>
                     </tr>
 
                     <?php
@@ -58,9 +58,9 @@
                                             <td><?php echo $username; ?></td>
                                             <td><?php echo $password; ?></td>
                                             <td>
-                                            <a href="update-admin.php?username=<?php echo $username; ?>" class = "btn-primary">Update admin</a>
-                                            <a href="change-pass.php?username=<?php echo $username; ?>" class = "btn-primary">Update password</a>
-                                            <a href="delete-admin.php?username=<?php echo $username; ?>" class = "btn-red">Delete admin</a>
+                                            <a href="update-admin.php?username=<?php echo $username; ?>" class = "btn-primary">Редагувати ім'я</a>
+                                            <a href="change-pass.php?username=<?php echo $username; ?>" class = "btn-primary">Редагувати пароль</a>
+                                            <a href="delete-admin.php?username=<?php echo $username; ?>" class = "btn-red">Видалити</a>
                                             </td>
                                         </tr>
 

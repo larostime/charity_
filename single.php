@@ -127,83 +127,6 @@
                             </div>
                         </div>
 
-                        <div class="single-comment">
-                            <h2>3 Comments</h2>
-                            <ul class="comment-list">
-                                <li class="comment-item">
-                                    <div class="comment-body">
-                                        <div class="comment-img">
-                                            <img src="img/user.jpg" />
-                                        </div>
-                                        <div class="comment-text">
-                                            <h3><a href="">Josh Dunn</a></h3>
-                                            <span>01 Jan 2045 at 12:00pm</span>
-                                            <p>
-                                                Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                                            </p>
-                                            <a class="btn" href="">Reply</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="comment-item">
-                                    <div class="comment-body">
-                                        <div class="comment-img">
-                                            <img src="img/user.jpg" />
-                                        </div>
-                                        <div class="comment-text">
-                                            <h3><a href="">Josh Dunn</a></h3>
-                                            <p><span>01 Jan 2045 at 12:00pm</span></p>
-                                            <p>
-                                                Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                                            </p>
-                                            <a class="btn" href="">Reply</a>
-                                        </div>
-                                    </div>
-                                    <ul class="comment-child">
-                                        <li class="comment-item">
-                                            <div class="comment-body">
-                                                <div class="comment-img">
-                                                    <img src="img/user.jpg" />
-                                                </div>
-                                                <div class="comment-text">
-                                                    <h3><a href="">Josh Dunn</a></h3>
-                                                    <p><span>01 Jan 2045 at 12:00pm</span></p>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                                                    </p>
-                                                    <a class="btn" href="">Reply</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="comment-form">
-                            <h2>Leave a comment</h2>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Name *</label>
-                                    <input type="text" class="form-control" id="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" class="form-control" id="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="website">Website</label>
-                                    <input type="url" class="form-control" id="website">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Post Comment" class="btn btn-custom">
-                                </div>
-                            </form>
-                        </div>
                     </div>
 
                     <div class="col-lg-4">
@@ -512,34 +435,6 @@
                                         <li><a href="">Technology</a><span>(43)</span></li>
                                         <li><a href="">Trades</a><span>(32)</span></li>
                                     </ul>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-widget">
-                                <div class="image-widget">
-                                    <a href="#"><img src="img/blog-3.jpg" alt="Image"></a>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-widget">
-                                <h2 class="widget-title">Tags Cloud</h2>
-                                <div class="tag-widget">
-                                    <a href="">National</a>
-                                    <a href="">International</a>
-                                    <a href="">Economics</a>
-                                    <a href="">Politics</a>
-                                    <a href="">Lifestyle</a>
-                                    <a href="">Technology</a>
-                                    <a href="">Trades</a>
-                                </div>
-                            </div>
-
-                            <div class="sidebar-widget">
-                                <h2 class="widget-title">Text Widget</h2>
-                                <div class="text-widget">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea nec eros. Nunc eu enim non turpis id augue.
-                                    </p>
                                 </div>
                             </div>
                         </div>
