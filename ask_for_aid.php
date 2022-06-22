@@ -31,31 +31,31 @@
                         <div id="success"></div>
                         <form action=""  method="POST" name="sentMessage" enctype="multipart/form-data">
                             <div class="control-group">
-                                <input type="text" name="name" class="form-control" placeholder="Ваше ім'я" required="required" data-validation-required-message="Будь ласка, введість ваше ім'я" />
+                                <input type="text" name="name" class="form-control" placeholder="Ваше ім'я" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" name="second_name" class="form-control" placeholder="Ваше прізвище" required="required" data-validation-required-message="Будь ласка, введість ваше прізвище" />
+                                <input type="text" name="second_name" class="form-control" placeholder="Ваше прізвище" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="tel" name="phone_number" class="form-control" placeholder="Ваш номер телефону" required="required" data-validation-required-message="Будь ласка, введість ваш номер телефонуe" />
+                                <input type="tel" name="phone_number" class="form-control" placeholder="Ваш номер телефону" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email"  name="email" class="form-control" placeholder="Електронна скринька" required="required" data-validation-required-message="Будь ласка, введість ваш email" />
+                                <input type="email"  name="email" class="form-control" placeholder="Електронна скринька" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="title"  name="title" class="form-control" placeholder="Назва запиту" required="required" data-validation-required-message="Будь ласка, введість назву запиту" />
+                                <input type="title"  name="title" class="form-control" placeholder="Назва запиту" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="number" name="price" class="form-control" placeholder="Скільки потрібно (max 3400 грн.)" max="3400" required="required" data-validation-required-message="Будь ласка, введість необхідну суму" />
+                                <input type="number" name="price" class="form-control" placeholder="Скільки потрібно (max 3400 грн.)" max="3400" required="required" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea type="text" name="message" class="form-control" placeholder="Повідомлення" required="required" data-validation-required-message="Будь ласка, введість опис запиту"></textarea>
+                                <textarea type="text" name="message" class="form-control" placeholder="Повідомлення" required="required" ></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <td>Виберіть зображення: </td>
